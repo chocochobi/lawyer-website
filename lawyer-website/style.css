@@ -27,10 +27,12 @@ html {
 
 body {
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 600;
-  line-height: 1.9;
+  line-height: 1.95;
   color: var(--gray-dk);
+  word-break: auto-phrase;
+  line-break: strict;
   background: var(--white);
 }
 
@@ -184,7 +186,7 @@ header {
 
 .hero-sub {
   color: var(--gold-lt);
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 0.25em;
   margin-bottom: 20px;
   font-weight: 600;
@@ -201,7 +203,7 @@ header {
 
 .hero-desc {
   color: rgba(255,255,255,0.96);
-  font-size: 19px;
+  font-size: 21px;
   line-height: 1.9;
   margin-bottom: 40px;
 }
@@ -231,7 +233,7 @@ header {
 }
 
 .section-label {
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--gold);
@@ -277,8 +279,8 @@ header {
 
 .about-text p {
   color: var(--gray-md);
-  margin-bottom: 18px;
-  font-size: 18px;
+  margin-bottom: 20px;
+  font-size: 20px;
 }
 
 /* ===== 取扱分野 ===== */
@@ -306,7 +308,7 @@ header {
 .practice-note {
   text-align: center;
   color: var(--gray-md);
-  font-size: 18px;
+  font-size: 20px;
   margin-top: 48px;
 }
 
@@ -349,7 +351,7 @@ header {
 }
 
 .practice-card h3 {
-  font-size: 21px;
+  font-size: 23px;
   font-weight: 700;
   color: var(--navy);
   margin-bottom: 12px;
@@ -357,9 +359,9 @@ header {
 }
 
 .practice-card p {
-  font-size: 17px;
+  font-size: 19px;
   color: var(--gray-md);
-  line-height: 1.9;
+  line-height: 1.95;
 }
 
 /* ===== 弁護士紹介 ===== */
@@ -425,7 +427,7 @@ header {
 }
 
 .attorney-title {
-  font-size: 17px;
+  font-size: 18px;
   color: var(--gold);
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -446,7 +448,7 @@ header {
 }
 
 .attorney-details li {
-  font-size: 17px;
+  font-size: 18px;
   color: var(--gray-md);
   padding: 3px 0;
   padding-left: 14px;
@@ -463,7 +465,7 @@ header {
 }
 
 .attorney-message {
-  font-size: 17px;
+  font-size: 18px;
   color: var(--gray-md);
   line-height: 1.85;
   border-left: 3px solid var(--gold);
@@ -482,7 +484,7 @@ header {
 
 .contact-intro {
   color: rgba(255,255,255,0.96);
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 56px;
   line-height: 2;
 }
@@ -531,14 +533,14 @@ header {
 }
 
 .contact-value {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
   color: var(--white);
   letter-spacing: 0.03em;
 }
 
 .contact-note {
-  font-size: 17px;
+  font-size: 18px;
   color: rgba(255,255,255,0.92);
   margin-top: 2px;
 }
@@ -614,7 +616,7 @@ header {
   display: flex;
   align-items: center;
   gap: 16px;
-  font-size: 18px;
+  font-size: 19px;
   color: var(--white);
 }
 
@@ -629,7 +631,7 @@ header {
 
 .hours-note {
   margin-top: 20px;
-  font-size: 15px;
+  font-size: 16px;
   color: rgba(255,255,255,0.82);
   line-height: 1.8;
 }
@@ -898,7 +900,7 @@ header {
 
 .column-card-excerpt {
   color: var(--gray-md);
-  font-size: 17px;
+  font-size: 18px;
   margin-bottom: 18px;
 }
 
@@ -938,7 +940,7 @@ header {
 
 .column-empty-text {
   color: var(--gray-md);
-  font-size: 18px;
+  font-size: 19px;
   line-height: 1.9;
 }
 
@@ -961,7 +963,7 @@ header {
 .article-container { max-width: 760px; }
 
 .article-lead {
-  font-size: 20px;
+  font-size: 21px;
   color: var(--gray-dk);
   font-weight: 500;
   line-height: 1.95;
@@ -979,8 +981,8 @@ header {
 
 .article-body-section p {
   color: var(--gray-dk);
-  margin-bottom: 20px;
-  font-size: 18.5px;
+  margin-bottom: 22px;
+  font-size: 19.5px;
 }
 
 .article-note {
