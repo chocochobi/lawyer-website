@@ -211,7 +211,7 @@
     <div class="container">
       <div class="section-label light">Contact</div>
       <h2 class="section-title light">お問い合わせ</h2>
-      <p class="contact-intro">お気軽にお問い合わせください。<br>お電話またはフォームよりご連絡いただけます。</p>
+      <p class="contact-intro">お気軽にお問い合わせください。<br>ご相談はお電話にて承っております。</p>
 
       <div class="contact-wrapper">
         <div class="contact-info">
@@ -255,48 +255,28 @@
           </div>
         </div>
 
-        <form class="contact-form" onsubmit="handleSubmit(event)">
-          <input type="hidden" name="_subject" value="【サイトお問い合わせ】沼澤法律事務所">
-          <div class="form-group">
-            <label for="name">お名前 <span class="required">必須</span></label>
-            <input type="text" id="name" name="name" placeholder="山田 太郎" required>
-          </div>
-          <div class="form-group">
-            <label for="email">メールアドレス <span class="required">必須</span></label>
-            <input type="email" id="email" name="email" placeholder="example@mail.com" required>
-          </div>
-          <div class="form-group">
-            <label for="phone">電話番号</label>
-            <input type="tel" id="phone" name="phone" placeholder="090-1234-5678">
-          </div>
-          <div class="form-group">
-            <label for="area">ご相談分野 <span class="required">必須</span></label>
-            <select id="area" name="area" required>
-              <option value="" disabled selected>選択してください</option>
-              <optgroup label="ご家族のこと">
-                <option value="inheritance">相続</option>
-                <option value="will">遺言</option>
-                <option value="divorce">離婚</option>
-              </optgroup>
-              <optgroup label="お金・暮らしのトラブル">
-                <option value="traffic">交通事故</option>
-                <option value="realestate">不動産</option>
-                <option value="bankruptcy">借金・債務整理</option>
-                <option value="civil">お金・契約のトラブル</option>
-              </optgroup>
-              <optgroup label="刑事事件">
-                <option value="criminal">刑事事件</option>
-              </optgroup>
-              <option value="other">その他・分からない</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">ご相談内容 <span class="required">必須</span></label>
-            <textarea id="message" name="message" rows="5" placeholder="ご相談の概要をお書きください。" required></textarea>
-          </div>
-          <button type="submit" class="btn-submit">送信する</button>
-          <p class="form-note">送信いただいた個人情報は、お問い合わせへの対応にのみ使用します。</p>
-        </form>
+        <div class="hours-card">
+          <p class="hours-title">営業時間・定休日</p>
+          <table class="hours-table">
+            <thead>
+              <tr>
+                <th>月</th><th>火</th><th>水</th><th>木</th><th>金</th>
+                <th class="hours-off">土</th><th class="hours-off">日</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>●</td><td>●</td><td>●</td><td>●</td><td>●</td>
+                <td class="hours-off">休</td><td class="hours-off">休</td>
+              </tr>
+            </tbody>
+          </table>
+          <ul class="hours-detail">
+            <li><span class="hours-detail-label">受付時間</span><span>9:00〜17:30</span></li>
+            <li><span class="hours-detail-label">休業日</span><span>土曜・日曜・祝日</span></li>
+          </ul>
+          <p class="hours-note">「●」は受付日です。お電話でのご相談は受付時間内にお願いいたします。</p>
+        </div>
       </div>
 
       <div class="contact-map">
@@ -352,35 +332,6 @@
         navbar.classList.remove('scrolled');
       }
     });
-
-    // フォーム送信（Formspree経由でメール送信）
-    async function handleSubmit(e) {
-      e.preventDefault();
-      const form = e.target;
-      const btn = form.querySelector('.btn-submit');
-      btn.disabled = true;
-      btn.textContent = '送信中...';
-      try {
-        const res = await fetch('https://formspree.io/f/mdajvoal', {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
-        });
-        if (res.ok) {
-          btn.textContent = '送信完了しました';
-          btn.style.background = '#4a7c59';
-          form.reset();
-        } else {
-          btn.disabled = false;
-          btn.textContent = '送信する';
-          alert('送信に失敗しました。お手数ですが、お電話にてお問い合わせください。');
-        }
-      } catch (err) {
-        btn.disabled = false;
-        btn.textContent = '送信する';
-        alert('送信に失敗しました。通信環境をご確認のうえ、再度お試しください。');
-      }
-    }
   </script>
 
 </body>
